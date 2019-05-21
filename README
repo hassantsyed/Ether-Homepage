@@ -1,0 +1,42 @@
+# README
+Name: Hassan Syed
+
+Repo: https://github.com/hts13/CS1699_proj4
+
+## Project Description:
+I decided to make a 'clone' of the million dollar homepage except for Ethereum. You can buy blocks of space on the page for 1 Ether. You then provide a redirect link and image link which will display in the slot you chose if not already occupied. The backend for the program is written in solidity. This can be found the in contracts folder, 'Ad.sol'. The front end is done in javascript and html, 'app.js' & 'index.html' in the src folder. 
+
+## Setup
+* Truffle (Development Framework)
+* Ganache (Local blockchain)
+* NPM 3.5.2
+* Solidity +0.4.20
+* metamask
+
+
+## How to run:
+* Note: This is how to set up on your local instance of the blockchain. This contract is not dpeloyed on the mian Ethereum network.
+1. Install npm
+2. Install truffle
+3. Install ganache
+4. Install metamask
+5. run ganache
+    * ensure that it is running on port 7545
+6. open metamask in your browser and click 'Main Ethereum Network'
+7. click 'Custom RPC'
+8. scroll down to the RPC link field and enter 'http://localhost:7545'
+9. ensure that you metamask is running on this RPC (should have the custom RPC where 'Main Ethereum Network' was previously)
+10. copy the private key from one of the addresses in ganache
+11. In metamask, click on the circle in the top right corner and follow the instructions to import the account of the key you just copied
+12. run the following in a terminal at the base of the project directory `truffle migrate --reset`
+13. run `npm run dev` in the same directory
+    * this should open up a chrome browser to localhost:3000
+14. You should now be able to interact with the homepage.
+
+Below are some resources to help with set up if needed:
+
+https://truffleframework.com/docs/truffle/getting-started/installation
+http://www.dappuniversity.com/articles/the-ultimate-ethereum-dapp-tutorial (installing dependencies step)
+
+
+* Note: The 'Ownable.sol' contract comes from OpenZepplin which makes open source, secure contracts.
